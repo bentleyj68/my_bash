@@ -1,0 +1,22 @@
+#!/bin/bash
+## Setup my Fedora (Linux) directories
+##
+## leave script on first error
+set -e
+printf "My Fedora Setup Program \nStarting .....\n\n"
+
+## TODO: 
+## 1) get my_bash repo
+printf "Getting my_bash repo from github ....\n"
+test ! -e my_bash
+git clone https://github.com/bentleyj68/my_bash
+printf "Done. Remember to setup security keys if developing my_bash.\n\n"
+
+## 2) Create my user directories 
+# copy my custom user-dirs.dirs to ~/.config
+#       run   xdg-user-dirs-update;
+#             source ${HOME}/.config/user-dirs.dirs;
+## 3) run setup script
+## 4) bashrc config
+bashrcdir="/etc/profile.d/"
+printf "Copying custom.sh to${bashrcdir} \n"
