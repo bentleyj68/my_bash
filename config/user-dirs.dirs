@@ -7,17 +7,11 @@
 #
 # 
 #
-XDG_CODE_DIR="$HOME/code"
 XDG_DESKTOP_DIR="$HOME/other/desktop"
-XDG_DOCKER_DIR="$HOME/img"
 XDG_DOCUMENTS_DIR="$HOME/docs"
 XDG_DOWNLOAD_DIR="$HOME/tmp"
-XDG_FONTS_DIR="$HOME/other/fonts"
-XDG_IMAGE_DIR="$HOME/img"
 XDG_MUSIC_DIR="$HOME/media/tunes"
-XDG_OTHER_DIR="$HOME/other"
 XDG_PICTURES_DIR="$HOME/media/pics"
 XDG_PUBLICSHARE_DIR="$HOME/other/public"
-XDG_REPOS_DIR="$HOME/repos"
 XDG_TEMPLATES_DIR="$HOME/docs/templates"
 XDG_VIDEOS_DIR="$HOME/media/vids"
