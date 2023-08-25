@@ -24,14 +24,21 @@ from libqtile.utils import guess_terminal
 from typing import List  # noqa: F401
 
 @hook.subscribe.startup_once
+
 def autostart():
     home = os.path.expanduser('~')
     subprocess.Popen([home + '/.config/qtile/autostart.sh'])
 
+def search():
+    qtile.cmd_spawn("rofi -show drun")
+
+def power():
+    qtile.cmd_spawn("sh -c ~/.config/rofi/scripts/power")
+
 mod = "mod4"
 terminal = 'alacritty'     
-myBrowser = 'brave-browser'
-# myBrowser = 'firefox'
+# myBrowser = 'brave-browser'
+myBrowser = 'firefox'
 home = os.path.expanduser('~')
 
 keys = [
@@ -98,6 +105,7 @@ keys = [
              lazy.spawn(myBrowser),
              desc='Qutebrowser'
              ),
+    Key([mod], "p", lazy.spawn("sh -c ~/.config/rofi/scripts/power"), desc='powermenu'),
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer sset Master 5%-"), 
             desc="Lower Volume by 5%"),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer sset Master 5%+"), 
