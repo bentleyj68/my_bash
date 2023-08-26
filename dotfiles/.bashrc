@@ -48,6 +48,12 @@ function find_largest_files() {
     du -h -x -s -- * | sort -r -h | head -20;
 }
 
+mkcdir ()
+{
+    mkdir -p -- "$1" &&
+       cd -P -- "$1"
+}
+
 # custom by user
 if [[ "$(id -u -n)" == "jbentley" ]];then
    alias ll='ls -lah'
