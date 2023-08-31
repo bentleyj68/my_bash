@@ -6,7 +6,7 @@ picom &
 # /usr/bin/emacs --daemon &
 conky -c $HOME/.config/conky/qtile/dracula.conkyrc
 volumeicon &
-dunst &
+# dunst &  ## Systemd seems to run this at startup
 # nm-applet &
 ### Network
 nmcli con up MyRepublic\ FFB9 passwd-file $HOME/.config/qtile/.secret
